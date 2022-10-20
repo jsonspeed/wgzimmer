@@ -25,8 +25,8 @@ for zimmer in  zimmers:
     print("\nQuartier:")
     print(zimmer.address_neighborhood)
 
-    input = input("y/n: ")
-    if input == "y":
+    x = input("y/n: ")
+    if x == "y":
         zimmer.interesting = "Y"
     else:
         zimmer.interesting = "N"
