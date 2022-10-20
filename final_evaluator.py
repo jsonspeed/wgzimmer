@@ -11,9 +11,10 @@ for zimmer in zimmers:
     url = 'http://wgzimmer.ch/' + zimmer.link.encode("UTF-8")
     webbrowser.open(url, new=new)
 
-    input = raw_input("y/n: ")
+    input = input("y/n: ")
     if input == "y":
         zimmer.interesting = "final"
     else:
         zimmer.interesting = "N"
     session.commit()
+

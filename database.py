@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:////Users/markusroth/wgzimmer/wgzimmer.db')
+engine = create_engine("sqlite:////Users/macbookair/repos/wgzimmer/wgzimmer.db")
 Base = declarative_base()
 
 
@@ -33,4 +33,3 @@ def get_session():
     Session = sessionmaker(bind=engine)
     session = Session()
     return session
-
