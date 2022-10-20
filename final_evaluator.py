@@ -8,11 +8,11 @@ session = get_session()
 zimmers = session.query(WgZimmer).filter(WgZimmer.interesting == "Y").all()
 for zimmer in zimmers:
     os.system("clear")
-    url = 'http://wgzimmer.ch/' + zimmer.link.encode("UTF-8")
+    url = 'http://wgzimmer.ch' + zimmer.link
     webbrowser.open(url, new=new)
 
-    input = input("y/n: ")
-    if input == "y":
+    x = input("y/n: ")
+    if x == "y":
         zimmer.interesting = "final"
     else:
         zimmer.interesting = "N"
